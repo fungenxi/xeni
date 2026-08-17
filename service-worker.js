@@ -1,5 +1,5 @@
-const CACHE_NAME = 'finance-tracker-storage-recovery-1';
-const PRECACHE = ["assets/index-10946a46.js","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
+const CACHE_NAME = 'finance-tracker-live-recovery-1';
+const PRECACHE = ["assets/index-57abec33.js","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
 
 self.addEventListener('install', (event) => {
