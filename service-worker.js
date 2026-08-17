@@ -1,4 +1,4 @@
-const CACHE_NAME = 'finance-tracker-smart-import-1';
+const CACHE_NAME = 'finance-tracker-smart-categories-1';
 const PRECACHE = ["assets/index-10946a46.js","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
 
