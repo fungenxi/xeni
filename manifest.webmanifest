@@ -1,7 +1,7 @@
 {
   "name": "Xeni",
   "short_name": "Xeni",
-  "description": "A private, local-first money tracker.",
+  "description": "Your money stays yours. Xeni just helps you keep tabs on it.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
