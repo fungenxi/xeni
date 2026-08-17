@@ -310,7 +310,7 @@ case"SET_ADD_MERCHANT":return{...e,addMerchant:t.value};
 case"SET_ADD_DATE":return{...e,addDate:t.value};
 case"KEYPAD_PRESS":{let n=e.addAmount;const r=t.key,a=n.includes(".")&&n.split(".")[1].length>=2;return"Clear"===r?n="":"⌫"===r?n=n.slice(0,-1):"."===r?n=n.includes(".")?n:(n||"0")+".":a||(n=("0"===n?"":n)+r),{...e,addAmount:n}}
 case"ADD_TRANSACTION":return{...e,transactions:[t.transaction,...e.transactions],categories:t.categories??e.categories,sheet:null,addAmount:"",addMerchant:"",addCustomCategory:"",addCustomIncomeCategory:""};
-case"SET_ANALYTICS_MODE":return{...e,analyticsPrefs:{...e.analyticsPrefs,mode:t.mode},analyticsMenuOpen:null,analyticsBarIndex:0,homeBarIndex:0};
+case"SET_ANALYTICS_MODE":return{...e,analyticsPrefs:{...e.analyticsPrefs,mode:t.mode},analyticsMenuOpen:null};
 case"OPEN_CURRENT_MONTH_ANALYTICS":return{...e,tab:"analytics",sheet:null,analyticsPrefs:{...e.analyticsPrefs,range:"Month",year:t.year,mode:"expenses"},analyticsMenuOpen:null,analyticsBarIndex:t.month};
 case"SET_ANALYTICS_RANGE":return{...e,analyticsPrefs:{...e.analyticsPrefs,range:t.range},analyticsMenuOpen:null,analyticsBarIndex:"Month"===t.range?(new Date).getMonth():0};
 case"SET_ANALYTICS_YEAR":return{...e,analyticsPrefs:{...e.analyticsPrefs,year:t.year},analyticsMenuOpen:null,analyticsBarIndex:"Month"===e.analyticsPrefs.range?e.analyticsBarIndex:0};
