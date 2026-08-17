@@ -1,4 +1,4 @@
-const CACHE_NAME = 'finance-tracker-smart-income-1';
+const CACHE_NAME = 'finance-tracker-storage-recovery-1';
 const PRECACHE = ["assets/index-10946a46.js","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
 
@@ -37,12 +37,11 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => {
-      if (cached) return cached;
-      return fetch(request).then((response) => {
+    fetch(request)
+      .then((response) => {
         if (response.ok) caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone()));
         return response;
-      });
-    })
+      })
+      .catch(() => caches.match(request))
   );
 });
