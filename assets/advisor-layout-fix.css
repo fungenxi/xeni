@@ -1,0 +1,15 @@
+@import url("./index-d702a2f6.css");
+
+.advisor-guidance-card.advisor-guidance-standalone {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.advisor-guidance-standalone > div {
+  min-width: 0;
+}
+
+.advisor-guidance-standalone p,
+.advisor-guidance-standalone small,
+.advisor-guidance-standalone a {
+  overflow-wrap: anywhere;
+}
