@@ -1,0 +1,156 @@
+@import url("./index-d702a2f6.css");
+
+.advisor-guidance-card.advisor-guidance-standalone {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.advisor-guidance-standalone > div {
+  min-width: 0;
+}
+
+.advisor-guidance-standalone p,
+.advisor-guidance-standalone small,
+.advisor-guidance-standalone a {
+  overflow-wrap: anywhere;
+}
+
+.advisor-home-card {
+  margin: 18px 0 8px;
+  padding: 20px;
+  border: 1px solid rgba(92, 69, 122, .18);
+  border-radius: 24px;
+  background: linear-gradient(145deg, #17121f 0%, #2d1f3e 58%, #152833 100%);
+  color: #fff;
+  box-shadow: 0 16px 38px rgba(26, 17, 38, .18);
+  overflow: hidden;
+}
+
+.advisor-home-head,
+.advisor-home-projections,
+.advisor-home-action,
+.advisor-home-checkpoints {
+  display: flex;
+}
+
+.advisor-home-head {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.advisor-home-head span:first-child {
+  color: #d8c8ed;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.advisor-home-head h3 {
+  margin: 5px 0 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.advisor-home-chip {
+  flex: none;
+  padding: 6px 9px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  color: #e9e2f2 !important;
+  font-size: 10px !important;
+  letter-spacing: 0 !important;
+}
+
+.advisor-home-projections {
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+
+.advisor-home-projections > div {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.09);
+}
+
+.advisor-home-projections span,
+.advisor-home-projections b {
+  display: block;
+}
+
+.advisor-home-projections span {
+  margin-bottom: 4px;
+  color: #cfc4dc;
+  font-size: 11px;
+}
+
+.advisor-home-projections b {
+  color: #fff;
+  font-size: clamp(18px, 6vw, 25px);
+  overflow-wrap: anywhere;
+}
+
+.advisor-home-card > p,
+.advisor-home-empty p {
+  margin: 0;
+  color: #d6cedf;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.advisor-home-action {
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 17px;
+  background: rgba(223, 199, 255, .12);
+}
+
+.advisor-home-action > span {
+  display: grid;
+  flex: none;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e7d7fb;
+  color: #251831;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.advisor-home-action b,
+.advisor-home-action small,
+.advisor-home-checkpoints b,
+.advisor-home-checkpoints small {
+  display: block;
+}
+
+.advisor-home-action b { color: #fff; font-size: 13px; }
+.advisor-home-action small { margin-top: 3px; color: #cfc5db; font-size: 11px; line-height: 1.45; }
+
+.advisor-home-empty { margin: 18px 0 4px; padding: 15px; border-radius: 17px; background: rgba(255,255,255,.09); }
+.advisor-home-empty b { display: block; margin-bottom: 4px; }
+
+.advisor-home-checkpoints {
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 16px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.advisor-home-checkpoints > div { width: 100%; }
+.advisor-home-checkpoints b { color: #fff; font-size: 12px; }
+.advisor-home-checkpoints small { margin-top: 3px; color: #cfc5db; font-size: 11px; line-height: 1.45; }
+.advisor-home-checkpoints a { color: #e6d2ff; font-size: 11px; font-weight: 700; }
+.advisor-home-note { display: block; margin-top: 14px; color: #a99db5; font-size: 10px; line-height: 1.45; }
+
+@media (max-width: 360px) {
+  .advisor-home-card { padding: 17px; }
+  .advisor-home-projections { flex-direction: column; }
+}
