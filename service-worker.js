@@ -1,5 +1,5 @@
-const CACHE_NAME = 'finance-tracker-travel-accuracy-1';
-const PRECACHE = ["assets/index-travel-accuracy.js","assets/advisor-home-plan.css","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
+const CACHE_NAME = 'finance-tracker-reimbursement-net-1';
+const PRECACHE = ["assets/index-reimbursement-net.js","assets/advisor-home-plan.css","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
 
 self.addEventListener('install', (event) => {
