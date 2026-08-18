@@ -1,5 +1,5 @@
-const CACHE_NAME = 'finance-tracker-private-pdf-import-1';
-const PRECACHE = ["assets/index-private-pdf-import.js","assets/advisor-home-plan.css","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
+const CACHE_NAME = 'finance-tracker-cent-precision-1';
+const PRECACHE = ["assets/index-cent-precision.js","assets/advisor-home-plan.css","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest"];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
 
 self.addEventListener('install', (event) => {
