@@ -110,19 +110,16 @@ function escapeHtml(value) {
 }
 
 export async function mountCategoryRules() {
-  if (loading) return;
+  if (loading || document.getElementById(SECTION_ID)) return;
   const anchor = findAnchor();
   if (!anchor) return;
 
-  let section = document.getElementById(SECTION_ID);
-  if (!section) {
-    section = document.createElement('div');
-    section.id = SECTION_ID;
-    section.innerHTML = `
-      <div class="settings-section-label">Smart categories</div>
-      <div class="settings-group" id="xeni-smart-category-group"></div>`;
-    anchor.parentNode.insertBefore(section, anchor);
-  }
+  const section = document.createElement('div');
+  section.id = SECTION_ID;
+  section.innerHTML = `
+    <div class="settings-section-label">Smart categories</div>
+    <div class="settings-group" id="xeni-smart-category-group"></div>`;
+  anchor.parentNode.insertBefore(section, anchor);
 
   const group = section.querySelector('#xeni-smart-category-group');
   if (!group) return;
