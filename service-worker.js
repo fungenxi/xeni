@@ -1,5 +1,20 @@
-const CACHE_NAME = 'finance-tracker-pwa-safe-1';
-const PRECACHE = ["assets/index-cent-precision.js","assets/advisor-home-plan.css","assets/index-d702a2f6.css","icon.svg","index.html","manifest.webmanifest","pwa-update.js"];
+const CACHE_NAME = 'finance-tracker-xeni-1.1.0';
+const PRECACHE = [
+  "assets/index-cent-precision.js",
+  "assets/advisor-home-plan.css",
+  "assets/index-d702a2f6.css",
+  "assets/xeni-enhancements.css",
+  "icon.svg",
+  "index.html",
+  "manifest.webmanifest",
+  "pwa-update.js",
+  "src/app-enhancements.js",
+  "src/data/local-db.js",
+  "src/features/data-safety.js",
+  "src/features/category-rules.js",
+  "src/features/transaction-search.js",
+  "src/features/advisor-actions.js"
+];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
 
 self.addEventListener('install', (event) => {
