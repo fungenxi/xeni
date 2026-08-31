@@ -55,7 +55,7 @@ function ensureBackupNote(group) {
 
 function wireExportButton(group) {
   const exportButton = [...group.querySelectorAll('button.list-row')]
-    .find((button) => button.querySelector('.list-row-title')?.textContent?.trim() === 'Export backup');
+    .find((button) => ['Export backup', 'Back up now'].includes(button.querySelector('.list-row-title')?.textContent?.trim()));
   if (!exportButton || exportButton.dataset.xeniBackupWired === '1') return;
   exportButton.dataset.xeniBackupWired = '1';
 
@@ -117,8 +117,9 @@ export async function refreshDataSafety() {
 export function mountDataSafety() {
   const group = findSettingsDataGroup();
   if (!group) return;
+  wireExportButton(group);
+  if (document.getElementById(ROW_ID)) return;
   ensureBackupRow(group);
   ensureBackupNote(group);
-  wireExportButton(group);
   refreshDataSafety();
 }
