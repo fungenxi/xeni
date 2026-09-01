@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '1.1.1';
+  const VERSION = '1.1.2';
   const UPDATE_ROW_ID = 'xeni-app-update-row';
   let reloading = false;
   let checking = false;
