@@ -1,12 +1,14 @@
 import { mountAdvisorActions } from './features/advisor-actions.js';
+import { mountCategoryPolicy } from './features/category-policy.js';
 import { mountCategoryRules } from './features/category-rules.js';
+import { mountChartScaling } from './features/chart-scaling.js';
 import { mountDataSafety } from './features/data-safety.js';
-import { mountTransactionSearch } from './features/transaction-search.js';
 
 function enhance() {
   mountDataSafety();
   mountCategoryRules();
-  mountTransactionSearch();
+  mountCategoryPolicy();
+  mountChartScaling();
   mountAdvisorActions();
 }
 
