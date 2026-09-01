@@ -1,4 +1,4 @@
-const CACHE_NAME = 'finance-tracker-xeni-1.1.0';
+const CACHE_NAME = 'finance-tracker-xeni-1.1.1';
 const PRECACHE = [
   "assets/index-cent-precision.js",
   "assets/advisor-home-plan.css",
@@ -12,7 +12,8 @@ const PRECACHE = [
   "src/data/local-db.js",
   "src/features/data-safety.js",
   "src/features/category-rules.js",
-  "src/features/transaction-search.js",
+  "src/features/category-policy.js",
+  "src/features/chart-scaling.js",
   "src/features/advisor-actions.js"
 ];
 const urlFor = (file) => new URL(file, self.registration.scope).href;
