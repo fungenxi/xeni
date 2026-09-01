@@ -1,4 +1,4 @@
-const CACHE_NAME = 'finance-tracker-xeni-1.1.1';
+const CACHE_NAME = 'finance-tracker-xeni-1.1.2';
 const PRECACHE = [
   "assets/index-cent-precision.js",
   "assets/advisor-home-plan.css",
