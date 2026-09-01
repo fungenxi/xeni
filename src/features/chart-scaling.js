@@ -21,14 +21,22 @@ function robustScaleMax(values) {
   if (!positive.length) return 100;
 
   const maximum = positive[positive.length - 1];
-  if (positive.length < 4) return roundUpToHundred(maximum);
+  if (positive.length === 1) return roundUpToHundred(maximum);
 
-  const percentileIndex = Math.max(0, Math.ceil(positive.length * 0.8) - 1);
-  const typicalHigh = positive[percentileIndex];
-  const secondHighest = positive[Math.max(0, positive.length - 2)];
-  const reference = maximum > typicalHigh * 3 ? Math.max(typicalHigh, secondHighest) : maximum;
+  const secondHighest = positive[positive.length - 2];
+  if (maximum > secondHighest * 6) {
+    return roundUpToHundred(secondHighest);
+  }
 
-  return roundUpToHundred(reference);
+  if (positive.length >= 4) {
+    const percentileIndex = Math.max(0, Math.ceil(positive.length * 0.8) - 1);
+    const typicalHigh = positive[percentileIndex];
+    if (maximum > typicalHigh * 3) {
+      return roundUpToHundred(typicalHigh);
+    }
+  }
+
+  return roundUpToHundred(maximum);
 }
 
 function fixCategoryShareBars() {
