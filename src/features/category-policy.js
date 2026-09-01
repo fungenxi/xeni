@@ -10,6 +10,7 @@ async function removeStoredOthersCap() {
     const category = await getRecord('categories', 'other_expense');
     if (!category || category.cap === 0) return;
     await putRecord('categories', { ...category, cap: 0 });
+    window.location.reload();
   } catch (error) {
     console.warn('Xeni could not remove the stored Others cap.', error);
   }
