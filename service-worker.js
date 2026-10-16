@@ -1,4 +1,4 @@
-const CACHE_NAME = 'finance-tracker-xeni-1.1.2';
+const CACHE_NAME = 'finance-tracker-xeni-1.1.3';
 const PRECACHE = [
   "assets/index-cent-precision.js",
   "assets/advisor-home-plan.css",
@@ -11,6 +11,7 @@ const PRECACHE = [
   "src/app-enhancements.js",
   "src/data/local-db.js",
   "src/features/data-safety.js",
+  "src/features/csv-export.js",
   "src/features/category-rules.js",
   "src/features/category-policy.js",
   "src/features/chart-scaling.js",
